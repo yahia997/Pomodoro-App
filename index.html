@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./menu.css" rel="stylesheet">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <title>Promodoro-App</title>
+</head>
+<body>
+    <h1>Promodoro</h1>
+    <nav>
+        <ul>
+            <li>promodoro</li>
+            <li>short break</li>
+            <li>long break</li>
+        </ul>
+    </nav>
+    <div id="all">
+        <div id="container">
+            <div class="chart" id="graph">
+                <span></span>
+                <div id="run-1"></div>
+                <div id="run-2"></div>
+                <div id="cover"></div>
+                <div class="cover-1"></div>
+                <div class="cover-2"></div>
+                <button id="stop-btn" stop="false">pause</button>
+            </div>
+        </div>
+    </div>
+    <div class="my-img">
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTQ5Ni42NTksMzEyLjEwN2wtNDcuMDYxLTM2LjhjMC41OTctNS42NzUsMS4xMDktMTIuMzA5LDEuMTA5LTE5LjMyOGMwLTcuMDE5LTAuNDkxLTEzLjY1My0xLjEwOS0xOS4zMjhsNDcuMTA0LTM2LjgyMSAgICBjOC43NDctNi45MTIsMTEuMTM2LTE5LjE3OSw1LjU2OC0yOS4zOTdMNDUzLjMzMSw4NS43NmMtNS4yMjctOS41NTctMTYuNjgzLTE0LjQ2NC0yOC4zMDktMTAuMTc2bC01NS41MzEsMjIuMjkzICAgIGMtMTAuNjQ1LTcuNjgtMjEuODAzLTE0LjE2NS0zMy4zNDQtMTkuMzQ5bC04LjQ0OC01OC45MDFDMzI2LjMxMiw4LjQ0OCwzMTYuNTg0LDAsMzA1LjA4NiwwaC05OC4xMzMgICAgYy0xMS40OTksMC0yMS4yMDUsOC40NDgtMjIuNTcxLDE5LjQ1NmwtOC40NjksNTkuMTE1Yy0xMS4xNzksNS4wMzUtMjIuMTY1LDExLjQzNS0zMy4yOCwxOS4zNDlsLTU1LjY4LTIyLjM1NyAgICBDNzYuNTIsNzEuNTMxLDY0LjA0LDc2LjA1Myw1OC44NTYsODUuNTY4TDkuODU0LDE3MC4zNDdjLTUuNzgxLDkuNzcxLTMuMzkyLDIyLjQ2NCw1LjU0NywyOS41NDdsNDcuMDYxLDM2LjggICAgYy0wLjc0Nyw3LjE4OS0xLjEwOSwxMy40NC0xLjEwOSwxOS4zMDdzMC4zNjMsMTIuMTE3LDEuMTA5LDE5LjMyOGwtNDcuMTA0LDM2LjgyMWMtOC43NDcsNi45MzMtMTEuMTE1LDE5LjItNS41NDcsMjkuMzk3ICAgIGw0OC45MzksODQuNjcyYzUuMjI3LDkuNTM2LDE2LjU3NiwxNC40ODUsMjguMzA5LDEwLjE3Nmw1NS41MzEtMjIuMjkzYzEwLjYyNCw3LjY1OSwyMS43ODEsMTQuMTQ0LDMzLjMyMywxOS4zNDlsOC40NDgsNTguODggICAgQzE4NS43NDcsNTAzLjU1MiwxOTUuNDU0LDUxMiwyMDYuOTc0LDUxMmg5OC4xMzNjMTEuNDk5LDAsMjEuMjI3LTguNDQ4LDIyLjU5Mi0xOS40NTZsOC40NjktNTkuMDkzICAgIGMxMS4xNzktNS4wNTYsMjIuMTQ0LTExLjQzNSwzMy4yOC0xOS4zNzFsNTUuNjgsMjIuMzU3YzIuNjg4LDEuMDQ1LDUuNDgzLDEuNTc5LDguMzYzLDEuNTc5YzguMjc3LDAsMTUuODkzLTQuNTIzLDE5LjczMy0xMS41NjMgICAgbDQ5LjE1Mi04NS4xMkM1MDcuODM4LDMzMS4zNDksNTA1LjQ0OCwzMTkuMDgzLDQ5Ni42NTksMzEyLjEwN3ogTTI1Ni4wMTksMzQxLjMzM2MtNDcuMDYxLDAtODUuMzMzLTM4LjI3Mi04NS4zMzMtODUuMzMzICAgIHMzOC4yNzItODUuMzMzLDg1LjMzMy04NS4zMzNzODUuMzMzLDM4LjI3Miw4NS4zMzMsODUuMzMzUzMwMy4wOCwzNDEuMzMzLDI1Ni4wMTksMzQxLjMzM3oiIGZpbGw9IiM3ZDgwOWYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" alt="settings" id="settings"/>
+    </div>
+    <div id="menu">
+        <form>
+            <header>
+                <h1>Settings</h1>
+                <button id="close" type="button">×</button>
+            </header>
+            <h3>TIME ( MINUTES )</h3>
+            <div>
+                <label>promodoro
+                    <input type="number" max="60" min="1" id="promo" value="25">
+                </label>
+                <label>short break
+                    <input type="number"  max="60" min="1" id="short" value="5">
+                </label>
+                <label>long break
+                    <input type="number"  max="60" min="1" id="long" value="15">
+                </label>
+            </div>
+            <div id="fonts">
+                FONT
+                <button type="button" style="font-family: sans-serif;">Aa</button>
+                <button type="button" style="font-family: 'Roboto Mono', monospace;">Aa</button>
+                <button type="button" style="font-family: 'Big Shoulders Stencil Display', cursive;">Aa</button>
+            </div>
+            <div id="color">
+                color
+                <button type="button" style="background-color: #f87070;"></button>
+                <button type="button" style="background-color: #6ff3f8;"></button>
+                <button type="button" style="background-color: #db80f7;"></button>
+            </div>
+            <button type="button" id="submit">Apply</button>
+        </form>
+    </div>
+    <audio id="beep" loop></audio>
+    <script src="./main.js"></script>
+</body>
+</html>

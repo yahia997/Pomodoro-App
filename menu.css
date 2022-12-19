@@ -1,0 +1,173 @@
+#menu {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    display: none;
+    z-index: 999999999999999999;
+}
+#submit {
+    border: none;
+    outline: none;
+    background-color: #f87070;
+    color: #fffaf6;
+    padding: 10px 25px;
+    font-size: 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: calc(50% - 57.525px);
+    margin-top: 5px;
+}
+#menu form {
+    width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: #14162ddb 0px 0px 0px 10000px;
+}
+#menu form header {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #e3e3e3;
+}
+#menu form header h1 {
+    color: #000118;
+    letter-spacing: 0.1px;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: auto !important;
+    width: fit-content !important;
+}
+#menu form header button {
+    margin-left: 50px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 50px;
+    line-height: 20px;
+    color: #8b8a92;
+    cursor: pointer;
+}
+#menu form h3 {
+    font-weight: 500;
+    width: 100%;
+    text-indent: 40px;
+    word-spacing: 1.9px;
+    letter-spacing: 1.5px;
+    padding-top: 8px;
+    font-size: 18px;
+}
+#menu form div {
+    display: flex;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    justify-content: space-around;
+    padding: 15px 0;
+    height: fit-content;
+    border-bottom: 2px solid #e3e3e3;
+}
+#menu form label {
+    width: 100px !important;
+    height: 50px !important;
+    display: flex;
+    flex-wrap: wrap;
+    color: #a2a2a4;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+#menu form label input {
+    width: 100%;
+    height: 40px;
+    background-color: #eef1fa;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    text-indent: 10px;
+}
+#menu form label input::-webkit-inner-spin-button {
+    cursor: pointer;
+    color: #b2b5be;
+}
+#fonts {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: sans-serif !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+#fonts button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+#color {
+    border: none !important;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 22px;
+}
+#color button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.cover-1 {
+    width: 224px;
+    border-radius: 50%;
+    height: 224px;
+    border: 5px solid #151932;
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999999;
+}
+.cover-2 {
+    width: 202px;
+    border-radius: 50%;
+    height: 202px;
+    border: 5px solid #151932;
+    background-color: transparent;
+    position: absolute;
+    z-index: 9999999;
+}
+#stop-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99999999;
+    letter-spacing: 3px;
+    color: #e3e3e3;
+    margin-top: 50%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+}
+.selected {
+    background-color: #151932 !important;
+    color: #ffffff !important;
+}
